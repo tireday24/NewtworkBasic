@@ -8,10 +8,10 @@
 struct ExchangeRate {
     var currencyRate: Double {
         willSet {
-            print("환율 변동 예정: \(self.currencyRate) -> \(newValue)")
+            print("환율 변동 예정: \(currencyRate) -> \(newValue)")
         }
         didSet {
-            print("환율 변동 완료: \(oldValue) -> \(self.currencyRate)")
+            print("환율 변동 완료: \(oldValue) -> \(currencyRate)")
         }
         
     }
