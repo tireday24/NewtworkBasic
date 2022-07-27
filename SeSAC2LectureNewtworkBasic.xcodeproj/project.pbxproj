@@ -16,6 +16,7 @@
 		8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301D2890E1F2006F6E5E /* SearchViewController.swift */; };
 		810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */; };
 		810030222890E4CF006F6E5E /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810030202890E4CF006F6E5E /* ListTableViewCell.xib */; };
+		810B788D28915736002FC195 /* Daily0727.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B788C28915736002FC195 /* Daily0727.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8100301D2890E1F2006F6E5E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		810030202890E4CF006F6E5E /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		810B788C28915736002FC195 /* Daily0727.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily0727.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */,
 				810030202890E4CF006F6E5E /* ListTableViewCell.xib */,
 				8100301D2890E1F2006F6E5E /* SearchViewController.swift */,
+				810B788C28915736002FC195 /* Daily0727.swift */,
 				810030122890DD7B006F6E5E /* Assets.xcassets */,
 				810030142890DD7B006F6E5E /* LaunchScreen.storyboard */,
 				810030172890DD7B006F6E5E /* Info.plist */,
@@ -150,6 +153,7 @@
 			files = (
 				8100300E2890DD7A006F6E5E /* ViewController.swift in Sources */,
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
+				810B788D28915736002FC195 /* Daily0727.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
 				810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */,
