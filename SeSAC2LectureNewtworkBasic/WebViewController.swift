@@ -51,8 +51,27 @@ class WebViewController: UIViewController {
         webView.load(request)
         //skeletonView library
     }
+    
+    
 
-
+    @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    
+    @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
+    @IBAction func goFowardButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoForward {
+            webView.canGoForward
+        }
+    }
+    
+    
 }
 
 extension WebViewController: UISearchBarDelegate {

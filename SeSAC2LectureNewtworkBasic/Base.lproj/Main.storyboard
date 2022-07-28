@@ -225,11 +225,23 @@
                                 <items>
                                     <barButtonItem image="xmark" catalog="system" id="hib-Aj-4J2"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p1N-oo-zgq"/>
-                                    <barButtonItem title="Item" image="arrow.backward" catalog="system" id="1YD-gW-OCB"/>
+                                    <barButtonItem title="Item" image="arrow.backward" catalog="system" id="1YD-gW-OCB">
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="EVr-bQ-UDK" id="4h2-gu-Ht1"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u5h-tX-KWm"/>
-                                    <barButtonItem image="arrow.clockwise" catalog="system" width="42" style="plain" id="iHj-nc-5NM"/>
+                                    <barButtonItem image="arrow.clockwise" catalog="system" width="42" style="plain" id="iHj-nc-5NM">
+                                        <connections>
+                                            <action selector="reload:" destination="EVr-bQ-UDK" id="hFW-n4-GA2"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="c6b-lN-8AZ"/>
-                                    <barButtonItem image="arrow.forward" catalog="system" style="plain" id="AP6-qk-Fz0"/>
+                                    <barButtonItem image="arrow.forward" catalog="system" style="plain" id="AP6-qk-Fz0">
+                                        <connections>
+                                            <action selector="goFowardButtonClicked:" destination="EVr-bQ-UDK" id="LeN-4s-KvZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="aFq-96-fvq"/>
                                 </items>
                             </toolbar>
