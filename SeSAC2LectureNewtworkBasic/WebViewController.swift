@@ -52,6 +52,9 @@ class WebViewController: UIViewController {
         //skeletonView library
     }
     
+    @IBAction func stopButtonClicked(_ sender: UIBarButtonItem) {
+        webView.stopLoading()
+    }
     
 
     @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
