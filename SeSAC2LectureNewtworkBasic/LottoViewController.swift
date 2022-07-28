@@ -13,7 +13,7 @@ class LottoViewController: UIViewController {
     //@IBOutlet weak var lottoPickerView: UIPickerView!
     //pickerview의 델리케이트와 Datasource 연결해줘야한다
     
-    //사용하려면 클래스 인스턴스 필스
+    //사용하려면 클래스 인스턴스 필수
     //코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있다
     //시뮬에서 옵션 누르면 제스쳐 기능이 나온다 줌 기능 확인할때
     //복붙 방지 -> 투명한 텍스트필드 위에 버튼 올려서 복붙 방지 or 아예 키보드 깜빡이는 커서 방지
@@ -38,6 +38,8 @@ class LottoViewController: UIViewController {
         
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
+        
+        numberTextField.delegate = self
 
        
     }
@@ -45,7 +47,7 @@ class LottoViewController: UIViewController {
 
 //뷰 객체마다 필요한 프로토콜 익스텐션으로 나눠준다
 //따로 파일을 만들고 익스텐션을 넣는 것은 가능하지만, 프로토콜이 많아질수록 파일이 많아져서 controller 안에 만드는게 좋다
-extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         //옵션 휠 돌아갈때 몇개?
@@ -67,4 +69,15 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return "\(lottoList[row])회차"
     }
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.isUserInteractionEnabled = false
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.isUserInteractionEnabled = true
+    }
+    
 }
+
+

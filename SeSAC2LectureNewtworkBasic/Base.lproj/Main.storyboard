@@ -163,12 +163,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcE-mG-Q7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800.0000000000002" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1551" y="117"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="Zqg-ho-cRv">
+            <objects>
+                <viewController storyboardIdentifier="buttonViewController" id="vN8-KP-UH4" customClass="buttonViewController" customModule="SeSAC2LectureNewtworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7iU-df-Off">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taq-5P-Axi">
+                                <rect key="frame" x="289" y="313" width="61" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="누르기"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="vN8-KP-UH4" eventType="touchUpInside" id="j9s-TK-kuI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i82-2b-Veg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" " id="OfD-MR-APh">
+                        <barButtonItem key="backBarButtonItem" title="back" id="geO-Ur-b2H"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NI2-T7-4eA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3431.884057971015" y="251.78571428571428"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="zMX-hd-oLw">
             <objects>
-                <viewController id="EVr-bQ-UDK" customClass="WebViewController" customModule="SeSAC2LectureNewtworkBasic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="EVr-bQ-UDK" customClass="WebViewController" customModule="SeSAC2LectureNewtworkBasic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TEy-1X-S7R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,13 +256,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzQ-uV-oAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2732" y="117"/>
+            <point key="canvasLocation" x="4315.9420289855079" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lPq-aH-4DN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dVa-cf-fwA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" backIndicatorTransitionMaskImage="chevron.backward" id="2QH-gd-u3m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vN8-KP-UH4" kind="relationship" relationship="rootViewController" id="P4P-4t-fRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ag-36-1od" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521.739130434783" y="251.78571428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.forward" catalog="system" width="128" height="98"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

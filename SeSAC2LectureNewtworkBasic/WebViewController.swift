@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
+    
+    static let identifier = "WebViewController"
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
@@ -23,7 +25,20 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         searchBar.delegate = self
         openWebPage(url: destinationURL)
-    
+        
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButton))
+        let image = UIImage(systemName: "chevron.backward")
+        let leftButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIImageView(image: image))
+        
+    }
+
+    @objc func backButton() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: buttonViewController.identifier) as! buttonViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     func openWebPage(url: String) {
@@ -43,7 +58,11 @@ class WebViewController: UIViewController {
 extension WebViewController: UISearchBarDelegate {
     //enter 눌렀을때, http일때는 안나오는 사이트가 태반
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        openWebPage(url: searchBar.text!)
+        guard let text = searchBar.text else {
+            print("Invaild URL")
+            return
+        }
+        openWebPage(url: text)
         // 옵셔널 바인딩 처리
     }
 }

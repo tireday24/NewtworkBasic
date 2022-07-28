@@ -20,6 +20,7 @@
 		819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6ED2892236600685E2C /* LottoViewController.swift */; };
 		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
 		819CD6F228923A9900685E2C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F128923A9900685E2C /* WebViewController.swift */; };
+		819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F328927EFD00685E2C /* buttonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		819CD6ED2892236600685E2C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		819CD6F128923A9900685E2C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		819CD6F328927EFD00685E2C /* buttonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				8100300B2890DD7A006F6E5E /* SceneDelegate.swift */,
 				8100300D2890DD7A006F6E5E /* ViewController.swift */,
 				8100300F2890DD7A006F6E5E /* Main.storyboard */,
+				819CD6F328927EFD00685E2C /* buttonViewController.swift */,
 				819CD6F128923A9900685E2C /* WebViewController.swift */,
 				819CD6EF2892305100685E2C /* TranslateViewController.swift */,
 				819CD6ED2892236600685E2C /* LottoViewController.swift */,
@@ -172,6 +175,7 @@
 				819CD6F228923A9900685E2C /* WebViewController.swift in Sources */,
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
+				819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */,
 				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
 				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,
