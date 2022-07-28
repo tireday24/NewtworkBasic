@@ -16,7 +16,10 @@
 		8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301D2890E1F2006F6E5E /* SearchViewController.swift */; };
 		810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */; };
 		810030222890E4CF006F6E5E /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810030202890E4CF006F6E5E /* ListTableViewCell.xib */; };
-		810B788F289157BD002FC195 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810B788E289157BD002FC195 /* Daily.swift */; };
+		819CD6EC28920CD600685E2C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */; };
+		819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6ED2892236600685E2C /* LottoViewController.swift */; };
+		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
+		819CD6F228923A9900685E2C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F128923A9900685E2C /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		8100301D2890E1F2006F6E5E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		810030202890E4CF006F6E5E /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		810B788E289157BD002FC195 /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
+		819CD6ED2892236600685E2C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		819CD6F128923A9900685E2C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +70,30 @@
 		810030082890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				819CD6EA28920CA500685E2C /* Protocol */,
 				810030092890DD7A006F6E5E /* AppDelegate.swift */,
 				8100300B2890DD7A006F6E5E /* SceneDelegate.swift */,
 				8100300D2890DD7A006F6E5E /* ViewController.swift */,
 				8100300F2890DD7A006F6E5E /* Main.storyboard */,
+				819CD6F128923A9900685E2C /* WebViewController.swift */,
+				819CD6EF2892305100685E2C /* TranslateViewController.swift */,
+				819CD6ED2892236600685E2C /* LottoViewController.swift */,
 				8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */,
 				810030202890E4CF006F6E5E /* ListTableViewCell.xib */,
 				8100301D2890E1F2006F6E5E /* SearchViewController.swift */,
-				810B788E289157BD002FC195 /* Daily.swift */,
 				810030122890DD7B006F6E5E /* Assets.xcassets */,
 				810030142890DD7B006F6E5E /* LaunchScreen.storyboard */,
 				810030172890DD7B006F6E5E /* Info.plist */,
 			);
 			path = SeSAC2LectureNewtworkBasic;
+			sourceTree = "<group>";
+		};
+		819CD6EA28920CA500685E2C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +169,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8100300E2890DD7A006F6E5E /* ViewController.swift in Sources */,
+				819CD6F228923A9900685E2C /* WebViewController.swift in Sources */,
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
+				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
+				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,
+				819CD6EC28920CD600685E2C /* ViewPresentableProtocol.swift in Sources */,
 				810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */,
-				810B788F289157BD002FC195 /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

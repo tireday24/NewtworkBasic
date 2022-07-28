@@ -24,9 +24,9 @@ import UIKit
 //}
 // -> viewController를 상속 받기 때문에 한번에 일괄로 받을 수 있다
 
+//프로토콜 내에 받는 요소들을 꼭 준수를 해라
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
     @IBOutlet weak var searchTableView: UITableView!
     
     override func viewDidLoad() {
@@ -52,6 +52,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
 
     }
+    
+    //viewDidLoad 하단에서 사용 가능
+    func configureView() {
+        searchTableView.backgroundColor = .clear
+        searchTableView.separatorColor = .clear
+        searchTableView.rowHeight = 60
+    }
+    
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
