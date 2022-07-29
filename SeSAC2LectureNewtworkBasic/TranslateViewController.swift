@@ -36,6 +36,9 @@ class TranslateViewController: UIViewController {
         
         userInputTextView.text = textViewPlaceholderText
         userInputTextView.textColor = .lightGray
+        
+        //열거형이나 타입프로퍼티 활용해서 써라 모빌리티쪽은 네비게이션에서 필요 없는 글자를 지워서 용량을 줄인다
+        userInputTextView.font = UIFont(name: "S-CoreDream-3Light", size: 17)
    
     }
     

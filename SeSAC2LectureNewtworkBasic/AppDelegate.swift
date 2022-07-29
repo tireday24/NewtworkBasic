@@ -8,14 +8,30 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        
+        //2. 노티제거 //deliver와 Pending차이 이미 도달한거 deliver 사용자가 받을 예정인 pending deliveridentifier 특정 노티만 삭제
+        //알람의 경우 Pending 사용 효과적, 미리 알림, 스케줄 => 하루 전 알림 30분 전 알림 => todolist에 이미 했다고 체크하면 예약한 것까지 날림
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+       return true
     }
+    
+    //포그라운드 수신!
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner, .badge, .sound])
+        //iOS14 list, banner <-> alert
+    }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 

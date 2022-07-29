@@ -21,6 +21,10 @@
 		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
 		819CD6F228923A9900685E2C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F128923A9900685E2C /* WebViewController.swift */; };
 		819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F328927EFD00685E2C /* buttonViewController.swift */; };
+		81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA7BDF28935D4500822FF2 /* LocationViewController.swift */; };
+		81EA7BE5289384D500822FF2 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE2289384D500822FF2 /* SCDream3.otf */; };
+		81EA7BE6289384D500822FF2 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE3289384D500822FF2 /* SCDream1.otf */; };
+		81EA7BE7289384D500822FF2 /* SCDream2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE4289384D500822FF2 /* SCDream2.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		819CD6F128923A9900685E2C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		819CD6F328927EFD00685E2C /* buttonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
+		81EA7BDF28935D4500822FF2 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		81EA7BE2289384D500822FF2 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
+		81EA7BE3289384D500822FF2 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
+		81EA7BE4289384D500822FF2 /* SCDream2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream2.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		81002FFD2890DD7A006F6E5E = {
 			isa = PBXGroup;
 			children = (
+				81EA7BE1289383EB00822FF2 /* Resource */,
 				810030082890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic */,
 				810030072890DD7A006F6E5E /* Products */,
 			);
@@ -77,6 +86,7 @@
 				8100300B2890DD7A006F6E5E /* SceneDelegate.swift */,
 				8100300D2890DD7A006F6E5E /* ViewController.swift */,
 				8100300F2890DD7A006F6E5E /* Main.storyboard */,
+				81EA7BDF28935D4500822FF2 /* LocationViewController.swift */,
 				819CD6F328927EFD00685E2C /* buttonViewController.swift */,
 				819CD6F128923A9900685E2C /* WebViewController.swift */,
 				819CD6EF2892305100685E2C /* TranslateViewController.swift */,
@@ -97,6 +107,16 @@
 				819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		81EA7BE1289383EB00822FF2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				81EA7BE3289384D500822FF2 /* SCDream1.otf */,
+				81EA7BE4289384D500822FF2 /* SCDream2.otf */,
+				81EA7BE2289384D500822FF2 /* SCDream3.otf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +177,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EA7BE5289384D500822FF2 /* SCDream3.otf in Resources */,
 				810030162890DD7B006F6E5E /* LaunchScreen.storyboard in Resources */,
 				810030222890E4CF006F6E5E /* ListTableViewCell.xib in Resources */,
+				81EA7BE6289384D500822FF2 /* SCDream1.otf in Resources */,
+				81EA7BE7289384D500822FF2 /* SCDream2.otf in Resources */,
 				810030132890DD7B006F6E5E /* Assets.xcassets in Resources */,
 				810030112890DD7A006F6E5E /* Main.storyboard in Resources */,
 			);
@@ -176,6 +199,7 @@
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
 				819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */,
+				81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */,
 				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
 				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,

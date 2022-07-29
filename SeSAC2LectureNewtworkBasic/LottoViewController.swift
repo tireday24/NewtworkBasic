@@ -28,6 +28,9 @@ class LottoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //인증번호 자동으로 받기 -> 타입에 맞춰서 알아서 입력됨
+        //numberTextField.textContentType = .oneTimeCode
+        
         //키보드 올라왔을 때 픽커뷰 보여주고 싶어
         //텍스트필드 누르면 픽커뷰 하나 더 올라옴
         //enter치면 픽커뷰 사라지게하기
