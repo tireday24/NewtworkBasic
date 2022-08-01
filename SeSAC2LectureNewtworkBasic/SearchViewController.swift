@@ -49,7 +49,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //재사용 재활용할 예정
         //테이블뷰 컨트롤러일때는 안하던거를 직접 지정해주었다
         //자유도가 높다(레이아웃 설정으로 가능)
-        searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+        searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
 
     }
     
@@ -68,7 +68,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuseIdentifier, for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
         
         cell.titleLabel.font = .boldSystemFont(ofSize: 22)
         cell.titleLabel.text = "HELLO"

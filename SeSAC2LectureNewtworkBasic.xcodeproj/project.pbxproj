@@ -16,6 +16,9 @@
 		8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301D2890E1F2006F6E5E /* SearchViewController.swift */; };
 		810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */; };
 		810030222890E4CF006F6E5E /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810030202890E4CF006F6E5E /* ListTableViewCell.xib */; };
+		816CBB622897527C0078D26E /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB612897527C0078D26E /* ReusableViewProtocol.swift */; };
+		816CBB65289757930078D26E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB64289757930078D26E /* Constant.swift */; };
+		816CBB6728975FAA0078D26E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB6628975FAA0078D26E /* UserDefaultsHelper.swift */; };
 		819CD6EC28920CD600685E2C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */; };
 		819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6ED2892236600685E2C /* LottoViewController.swift */; };
 		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
@@ -25,6 +28,8 @@
 		81EA7BE5289384D500822FF2 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE2289384D500822FF2 /* SCDream3.otf */; };
 		81EA7BE6289384D500822FF2 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE3289384D500822FF2 /* SCDream1.otf */; };
 		81EA7BE7289384D500822FF2 /* SCDream2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE4289384D500822FF2 /* SCDream2.otf */; };
+		81EEACF828977CDB002E9035 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 81EEACF728977CDB002E9035 /* Alamofire */; };
+		81EEACFB28977CF3002E9035 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 81EEACFA28977CF3002E9035 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,9 @@
 		8100301D2890E1F2006F6E5E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		810030202890E4CF006F6E5E /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		816CBB612897527C0078D26E /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		816CBB64289757930078D26E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		816CBB6628975FAA0078D26E /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		819CD6ED2892236600685E2C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81EEACFB28977CF3002E9035 /* SwiftyJSON in Frameworks */,
+				81EEACF828977CDB002E9035 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 		810030082890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic */ = {
 			isa = PBXGroup;
 			children = (
+				816CBB632897577E0078D26E /* Constant */,
 				819CD6EA28920CA500685E2C /* Protocol */,
 				810030092890DD7A006F6E5E /* AppDelegate.swift */,
 				8100300B2890DD7A006F6E5E /* SceneDelegate.swift */,
@@ -101,10 +112,20 @@
 			path = SeSAC2LectureNewtworkBasic;
 			sourceTree = "<group>";
 		};
+		816CBB632897577E0078D26E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				816CBB64289757930078D26E /* Constant.swift */,
+				816CBB6628975FAA0078D26E /* UserDefaultsHelper.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		819CD6EA28920CA500685E2C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				819CD6EB28920CD600685E2C /* ViewPresentableProtocol.swift */,
+				816CBB612897527C0078D26E /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -135,6 +156,10 @@
 			dependencies = (
 			);
 			name = SeSAC2LectureNewtworkBasic;
+			packageProductDependencies = (
+				81EEACF728977CDB002E9035 /* Alamofire */,
+				81EEACFA28977CF3002E9035 /* SwiftyJSON */,
+			);
 			productName = SeSAC2LectureNewtworkBasic;
 			productReference = 810030062890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +188,10 @@
 				Base,
 			);
 			mainGroup = 81002FFD2890DD7A006F6E5E;
+			packageReferences = (
+				81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				81EEACF928977CF3002E9035 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 810030072890DD7A006F6E5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,14 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816CBB6728975FAA0078D26E /* UserDefaultsHelper.swift in Sources */,
 				8100300E2890DD7A006F6E5E /* ViewController.swift in Sources */,
 				819CD6F228923A9900685E2C /* WebViewController.swift in Sources */,
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
 				819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */,
+				816CBB622897527C0078D26E /* ReusableViewProtocol.swift in Sources */,
 				81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */,
 				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
+				816CBB65289757930078D26E /* Constant.swift in Sources */,
 				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,
 				819CD6EC28920CD600685E2C /* ViewPresentableProtocol.swift in Sources */,
 				810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */,
@@ -422,6 +454,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		81EEACF928977CF3002E9035 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81EEACF728977CDB002E9035 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		81EEACFA28977CF3002E9035 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81EEACF928977CF3002E9035 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81002FFE2890DD7A006F6E5E /* Project object */;
 }

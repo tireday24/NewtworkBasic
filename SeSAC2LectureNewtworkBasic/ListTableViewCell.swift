@@ -8,9 +8,7 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-    static let identifier = "ListTableViewCell"
-
-   
+    //UITableViewCell 자체에서 이미 identifier을 가지고 있다
     @IBOutlet weak var titleLabel: UILabel!
     
 }

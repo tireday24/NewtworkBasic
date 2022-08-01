@@ -55,8 +55,6 @@ protocol viewPresentableProtocol {
     @objc optional func configureTextField()
 }
 
-
-
 /*
  ex. 테이블뷰
  */

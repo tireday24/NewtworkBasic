@@ -18,14 +18,14 @@ class buttonViewController: UIViewController {
     }
     
 
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: WebViewController.identifier) as! WebViewController
-        let nv = UINavigationController(rootViewController: vc)
-
-        nv.modalPresentationStyle = .automatic
-        self.present(nv, animated: true)
-    }
+//    @IBAction func buttonTapped(_ sender: UIButton) {
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: WebViewController.identifier) as! WebViewController
+//        let nv = UINavigationController(rootViewController: vc)
+//
+//        nv.modalPresentationStyle = .automatic
+//        self.present(nv, animated: true)
+//    }
 
 
 }

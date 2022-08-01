@@ -6,6 +6,9 @@
 //
 
 import UIKit
+//apple 먼저 한칸 뛰고 외부에서 다운 받은 것 선언 알파벳 순서 1. Import
+import Alamofire
+import SwiftyJSON
 
 class LottoViewController: UIViewController {
     
@@ -20,6 +23,11 @@ class LottoViewController: UIViewController {
     //뷰컨 클린하게 띄우고 아울렛으로 픽커뷰 만들고 탭바 붙임 overfullscreen 방식으로 아래에서 위로
     //텍스트 필드를 보더로 버튼으로 만들면 -> 사용자가 버튼이라 인식 -> 커서 깜빡거리는거 막음
     //sheetVC? -> 꽈차지 않은 뷰인데 에니메이션 넣는 뷰 panmodal
+    
+    
+    @IBOutlet var lottoNumber: [UILabel]!
+    @IBOutlet weak var bonusNumber: UILabel!
+    
     var lottoPickerView = UIPickerView()
     
     let lottoList: [Int] = Array(1...1025).reversed()
@@ -27,6 +35,10 @@ class LottoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0...5 {
+            lottoNumber[i].tag = i
+        }
         
         //인증번호 자동으로 받기 -> 타입에 맞춰서 알아서 입력됨
         //numberTextField.textContentType = .oneTimeCode
@@ -43,8 +55,51 @@ class LottoViewController: UIViewController {
         lottoPickerView.dataSource = self
         
         numberTextField.delegate = self
+        
+        requestLotto(number: 1025)
+        
+        labelDesign()
 
        
+    }
+    
+    func requestLotto(number: Int) {
+        
+        //AF: 200 ~ 299 status code
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        //접두어 -> AF 알라모파이어에서 url주소로 들어가고 get 방식 유효성 검사(상태코드) 실행 ex) 200 = 성공 response 데이터 가져오겠다
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                let date = json["drwNoDate"].stringValue
+                let bonus = json["bnusNo"].stringValue
+                
+                for num in 0...5 {
+                    self.lottoNumber[num].text = String(json["drwtNo\(self.lottoNumber[num].tag+1)"].intValue)
+                }
+                //명확하게 클래스 내부에 있다 self
+                self.numberTextField.text = date
+                self.bonusNumber.text = bonus
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func labelDesign() {
+        for i in lottoNumber {
+            i.layer.cornerRadius = 20
+            i.clipsToBounds = true
+            i.font = .boldSystemFont(ofSize: 20)
+            i.backgroundColor = .blue
+            i.textAlignment = .center
+            i.textColor = .white
+            
+        }
     }
 }
 
@@ -64,7 +119,9 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //멈추는 시점
-        numberTextField.text = "\(lottoList[row])회차"
+        requestLotto(number: lottoList[row])
+        //numberTextField.text = "\(lottoList[row])회차"
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

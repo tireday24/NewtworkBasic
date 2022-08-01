@@ -8,6 +8,9 @@
 import UIKit
 
 class LocationViewController: UIViewController {
+    //정수값 리터럴이 적은게 좋은 코드
+    //static var reuseIdentifier: String = String(describing: LocationViewController.self)
+    
     //사용자가 아무것도 안누른 상태 not determine 상태
     //Notification 1.
     //알람 UN usernotification 클래스이기 때문에 인스턴스를 받아서 ios 정보를 가져옴
@@ -16,6 +19,7 @@ class LocationViewController: UIViewController {
     //앱이 foreground에 있을 때 이미 앱을 쓰고 있기 때문에 Noti가 뜨면 안됨
     // foregruond 상태에서 Noti 받아야한다
     let notificationCenter = UNUserNotificationCenter.current()
+    
     
     
     override func viewDidLoad() {
@@ -30,7 +34,6 @@ class LocationViewController: UIViewController {
 //                print(name)
 //            }
 //        }
-        
         
         requestAuthorization()
 

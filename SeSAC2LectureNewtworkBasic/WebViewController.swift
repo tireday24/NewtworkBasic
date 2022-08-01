@@ -9,9 +9,9 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController {
+    //string describing -> 문자열 변환 -> 어떤 형태로 쓰임? 메타타입 -> "WebViewController" = String(describing: WebViewController.self)
+    //static var reuseIdentifier: String = String(describing: WebViewController.self)
     
-    static let identifier = "WebViewController"
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
     
