@@ -24,6 +24,10 @@
 		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
 		819CD6F228923A9900685E2C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F128923A9900685E2C /* WebViewController.swift */; };
 		819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F328927EFD00685E2C /* buttonViewController.swift */; };
+		81E6F4572898BD180034C0F7 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F4562898BD180034C0F7 /* BoxOfficeModel.swift */; };
+		81E6F459289901B40034C0F7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F458289901B40034C0F7 /* Extension.swift */; };
+		81E6F45B289917970034C0F7 /* BeerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */; };
+		81E6F45D289917BA0034C0F7 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */; };
 		81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA7BDF28935D4500822FF2 /* LocationViewController.swift */; };
 		81EA7BE5289384D500822FF2 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE2289384D500822FF2 /* SCDream3.otf */; };
 		81EA7BE6289384D500822FF2 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE3289384D500822FF2 /* SCDream1.otf */; };
@@ -32,7 +36,6 @@
 		81EEACFB28977CF3002E9035 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 81EEACFA28977CF3002E9035 /* SwiftyJSON */; };
 		81F5AB072897B65D00BFFBAE /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5AB062897B65D00BFFBAE /* BeerViewController.swift */; };
 		81F5AB092897B68700BFFBAE /* Beer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F5AB082897B68700BFFBAE /* Beer.storyboard */; };
-		81F5AB0B2897B83C00BFFBAE /* BeerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F5AB0A2897B83C00BFFBAE /* BeerInfo.swift */; };
 		81F5AB112897C89900BFFBAE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 81F5AB102897C89900BFFBAE /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -56,13 +59,16 @@
 		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		819CD6F128923A9900685E2C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		819CD6F328927EFD00685E2C /* buttonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
+		81E6F4562898BD180034C0F7 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
+		81E6F458289901B40034C0F7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewController.swift; sourceTree = "<group>"; };
+		81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		81EA7BDF28935D4500822FF2 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		81EA7BE2289384D500822FF2 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
 		81EA7BE3289384D500822FF2 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
 		81EA7BE4289384D500822FF2 /* SCDream2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream2.otf; sourceTree = "<group>"; };
 		81F5AB062897B65D00BFFBAE /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		81F5AB082897B68700BFFBAE /* Beer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Beer.storyboard; sourceTree = "<group>"; };
-		81F5AB0A2897B83C00BFFBAE /* BeerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,8 @@
 				8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */,
 				810030202890E4CF006F6E5E /* ListTableViewCell.xib */,
 				8100301D2890E1F2006F6E5E /* SearchViewController.swift */,
+				81E6F458289901B40034C0F7 /* Extension.swift */,
+				81E6F4562898BD180034C0F7 /* BoxOfficeModel.swift */,
 				810030122890DD7B006F6E5E /* Assets.xcassets */,
 				810030142890DD7B006F6E5E /* LaunchScreen.storyboard */,
 				810030172890DD7B006F6E5E /* Info.plist */,
@@ -153,8 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				81F5AB062897B65D00BFFBAE /* BeerViewController.swift */,
-				81F5AB0A2897B83C00BFFBAE /* BeerInfo.swift */,
 				81F5AB082897B68700BFFBAE /* Beer.storyboard */,
+				81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */,
+				81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -248,16 +257,19 @@
 				816CBB6728975FAA0078D26E /* UserDefaultsHelper.swift in Sources */,
 				8100300E2890DD7A006F6E5E /* ViewController.swift in Sources */,
 				819CD6F228923A9900685E2C /* WebViewController.swift in Sources */,
-				81F5AB0B2897B83C00BFFBAE /* BeerInfo.swift in Sources */,
 				8100300A2890DD7A006F6E5E /* AppDelegate.swift in Sources */,
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
 				81F5AB072897B65D00BFFBAE /* BeerViewController.swift in Sources */,
 				819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */,
+				81E6F45B289917970034C0F7 /* BeerCollectionViewController.swift in Sources */,
 				816CBB622897527C0078D26E /* ReusableViewProtocol.swift in Sources */,
+				81E6F459289901B40034C0F7 /* Extension.swift in Sources */,
 				81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */,
+				81E6F45D289917BA0034C0F7 /* BeerCollectionViewCell.swift in Sources */,
 				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
 				816CBB65289757930078D26E /* Constant.swift in Sources */,
+				81E6F4572898BD180034C0F7 /* BoxOfficeModel.swift in Sources */,
 				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,
 				819CD6EC28920CD600685E2C /* ViewPresentableProtocol.swift in Sources */,
 				810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */,
