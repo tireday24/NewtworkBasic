@@ -7,6 +7,22 @@
 
 import Foundation
 
+//url 관리
+struct APIKey {
+    //전체 소문자 or 전체 대문자
+    static let BOXOFFICE = "ee4645c90320403bec7e991490d2d13b"
+    
+    static let NAVER_ID = "Fv950ivdXLCglEG3G__f"
+    static let NAVER_SECRET = "B9EwiNaMC2"
+}
+
+struct EndPoint {
+    static let boxOfficeURL =  "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?"
+    static let lottoURL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber"
+    static let translateURL = "https://openapi.naver.com/v1/papago/n2mt"
+}
+
+
 //enum StoryboardName: String{
 //    //문자열을 쓰기 싫다면 case를 대문자로
 //    case Main

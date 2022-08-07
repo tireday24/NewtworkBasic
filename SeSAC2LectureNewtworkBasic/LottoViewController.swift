@@ -17,8 +17,8 @@ struct lottoDay {
     
     var day: Int{
         get {
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let startDate = dateFormatter.date(from: "2002-12-07")
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let startDate = dateFormatter.date(from: "2002-12-07 21:00")
             let lottoDayCnt = calendar.dateComponents([.day], from: startDate!, to: currentDate).day!
 
             return (lottoDayCnt / 7 ) + 1
@@ -46,6 +46,8 @@ class LottoViewController: UIViewController {
     var lottoPickerView = UIPickerView()
     
     let lottoList: [Int] = Array(1...lottoDay().day).reversed()
+    let ud = UserDefaults.standard
+    var numberList: [String] = []
     
     
     override func viewDidLoad() {
@@ -75,41 +77,45 @@ class LottoViewController: UIViewController {
         requestLotto(number: 1025)
         
         labelDesign()
+        
+        
 
        
     }
+
+//    func requestLotto(number: Int) {
+//
+//        //AF: 200 ~ 299 status code
+//        // number => 회차 1026 +7 할 때 마다 -> 이렇게 짜면 Date + 7 할때마다 회차 하나 올림
+//        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
+//
+//        //접두어 -> AF 알라모파이어에서 url주소로 들어가고 get 방식 유효성 검사(상태코드) 실행 ex) 200 = 성공 response 데이터 가져오겠다
+//        AF.request(url, method: .get).validate().responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                print("JSON: \(json)")
+//
+//                let date = json["drwNoDate"].stringValue
+//                let bonus = json["bnusNo"].stringValue
+//
+//                for num in 0...5 {
+//                    self.lottoNumber[num].text = String(json["drwtNo\(self.lottoNumber[num].tag+1)"].intValue)
+//                }
+//
+//
+//                //명확하게 클래스 내부에 있다 self
+//                print("==1==")
+//                self.numberTextField.text = date
+//                self.bonusNumber.text = bonus
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
     
-    func requestLotto(number: Int) {
-        
-        //AF: 200 ~ 299 status code
-        // number => 회차 1026 +7 할 때 마다 -> 이렇게 짜면 Date + 7 할때마다 회차 하나 올림
-        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
-        
-        //접두어 -> AF 알라모파이어에서 url주소로 들어가고 get 방식 유효성 검사(상태코드) 실행 ex) 200 = 성공 response 데이터 가져오겠다
-        AF.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                
-                let date = json["drwNoDate"].stringValue
-                let bonus = json["bnusNo"].stringValue
-                
-                for num in 0...5 {
-                    self.lottoNumber[num].text = String(json["drwtNo\(self.lottoNumber[num].tag+1)"].intValue)
-                }
-                
-                
-                //명확하게 클래스 내부에 있다 self
-                print("==1==")
-                self.numberTextField.text = date
-                self.bonusNumber.text = bonus
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+   
     
     func labelDesign() {
         for i in lottoNumber {
@@ -134,6 +140,54 @@ class LottoViewController: UIViewController {
 //
 //        return (lottoDayCnt / 7 ) + 1
 //    }
+
+    
+    func requestLotto(number: Int) {
+        if ud.array(forKey:"\(number)") == nil {
+        //AF: 200 ~ 299 status code
+        // number => 회차 1026 +7 할 때 마다 -> 이렇게 짜면 Date + 7 할때마다 회차 하나 올림
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
+
+        //접두어 -> AF 알라모파이어에서 url주소로 들어가고 get 방식 유효성 검사(상태코드) 실행 ex) 200 = 성공 response 데이터 가져오겠다
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                var lottoList: [String] = []
+
+                let date = json["drwNoDate"].stringValue
+                let bonus = json["bnusNo"].stringValue
+
+                for num in 0...5 {
+                    self.lottoNumber[num].text = String(json["drwtNo\(num+1)"].intValue)
+                    lottoList.append(String(json["drwtNo\(num+1)"].intValue))
+                }
+                
+                lottoList.append(json["bnusNo"].stringValue)
+                lottoList.append(json["drwNoDate"].stringValue)
+
+                //명확하게 클래스 내부에 있다 self
+                print("==1==")
+                self.numberTextField.text = date
+                self.bonusNumber.text = bonus
+                self.ud.set(lottoList, forKey: "\(number)")
+
+            case .failure(let error):
+                print(error)
+            }
+        }
+        } else {
+            numberList = ud.array(forKey: "\(number)") as! [String]
+            
+            for num in 0...4 {
+                self.lottoNumber[num].text = "\(self.numberList[num])"
+            }
+            self.bonusNumber.text = "\(self.numberList[6])"
+        }
+        
+    }
 }
 
 //뷰 객체마다 필요한 프로토콜 익스텐션으로 나눠준다
@@ -171,6 +225,8 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource, UIT
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.isUserInteractionEnabled = true
     }
+    
+    
     
 }
 

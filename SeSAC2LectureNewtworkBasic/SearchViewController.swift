@@ -9,6 +9,7 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 /*
  Swift Protocol
@@ -52,8 +53,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //BoxOffice 배열
     var list: [BoxOfficeModel] = []
+    //ProgressView
+    let hud = JGProgressHUD()
     
     
+    //0803 타입 어노테이션 vs 타입 추론 => 누가 더 속도가 빠를까? => 타입 어노테이션 타입 명시를 해주어라
+    //What's new in Swift 옛날에 비해 추론의 속도는 빨라지고 있다
+    var nickname: String = ""
+    var username = ""
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,6 +84,21 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //재사용 재활용할 예정
         //테이블뷰 컨트롤러일때는 안하던거를 직접 지정해주었다
         //자유도가 높다(레이아웃 설정으로 가능)
+        
+        // 0803 TMI -> "yyyyMMdd" "YYYYMMdd" 소문자 대문자 차이 -> 대문자는 마지막주에 대한 것에 대하여 달라질 수 있다
+        // 하루 전 계산 timeInterval
+       
+        //let format = DateFormatter
+        //format.dateFormat = "yyyyMMdd"
+        //let dateResult = Date(timeIntervalSinceNow: -86400)
+        //let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        //let dateResult = format.string(from: yesterday!)
+        //requestBoxOffice(date: dateResult)
+        
+        //0803 네트워크 통신: 서버 점검 등에 대한 예외 처리
+        //네트워크가 느린 환경 테스트: 실기기 테스트 시 condition 조절 가능!
+        // 시뮬레이터에서도 가능! (추가 설치) 윈도우 => 디바이스 시뮬레이터 => 디바이스 아래 컨디션 조절 가능 네트워크 속도 제한 가능
+        
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
         
         boxOfficeSearchBar.delegate = self
@@ -93,6 +118,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func requestBoxOffice(date: String) {
         
         //서버 통신 전에 배열 지우고 나서 시작 로딩바를 띄우기, 데이터의 갯수가 0
+        hud.show(in: view)
         list.removeAll()
         
         //AF: 200 ~ 299 status code
@@ -102,14 +128,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(date)"
 
         //접두어 -> AF 알라모파이어에서 url주소로 들어가고 get 방식 유효성 검사(상태코드) 실행 ex) 200 = 성공 response 데이터 가져오겠다
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
                 //데이터 넘어 왔을 때 지움
-                //self.list.removeAll()
+                self.list.removeAll()
                 
                 for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
                     let movieNm = movie["movieNm"].stringValue
@@ -123,13 +149,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 //리스트 다 넣은 후 갱신 
                 self.searchTableView.reloadData()
-                
-                print(self.list)
+                //로딩바 지우기
+                self.hud.dismiss()
                 
             case .failure(let error):
+                //실패 했을 때 로딩바 지우기
+                self.hud.dismiss()
                 print(error)
+                
+                //시뮬레이터 실패 테스트 > 맥 > 실제 디바이스 테스트
+                
             }
         }
+        //hud.dismiss() 여기에 호출되면 바로 사라짐 함수만 실행되면 사라진다
+        
     }
     
     func yesterday() -> String {

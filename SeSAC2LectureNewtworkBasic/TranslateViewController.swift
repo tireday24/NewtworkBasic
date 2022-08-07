@@ -52,7 +52,7 @@ class TranslateViewController: UIViewController {
     func requestTranslateData() {
         let url = EndPoint.translateURL
         
-        let parameter = ["source": "ko", "target": "en", "text": "\(userInputTextView.text!)"]
+        let parameter = ["source": "ko", "target": "ja", "text": "\(userInputTextView.text!)"]
         
         let header: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
         

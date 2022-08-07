@@ -20,6 +20,7 @@ class LocationViewController: UIViewController {
     // foregruond 상태에서 Noti 받아야한다
     let notificationCenter = UNUserNotificationCenter.current()
     
+    @IBOutlet weak var imageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -41,6 +42,31 @@ class LocationViewController: UIViewController {
     }
     
     
+    @IBAction func downloadImage(_ sender: UIButton) {
+        
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+        print("1", Thread.isMainThread)
+        
+        
+        DispatchQueue.global().async { //동시 여러 작업 가능하게 해달라 처음부터 Main 쓰면 스위치 못 씀
+            
+            print("2", Thread.isMainThread)
+            
+            let data = try! Data(contentsOf: URL(string: url)!)
+            let image = UIImage(data: data)
+            
+            //이미지 다운 받는 동안 다른 동작 가능
+            DispatchQueue.main.async {
+                
+                print("3", Thread.isMainThread)
+                
+                self.imageView.image = image
+                
+            }
+
+            
+        }
+    }
     @IBAction func notificationButtonClicked(_ sender: UIButton) {
         sendNotificaiton()
     }

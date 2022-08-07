@@ -16,6 +16,7 @@
 		8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301D2890E1F2006F6E5E /* SearchViewController.swift */; };
 		810030212890E4CF006F6E5E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100301F2890E4CF006F6E5E /* ListTableViewCell.swift */; };
 		810030222890E4CF006F6E5E /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810030202890E4CF006F6E5E /* ListTableViewCell.xib */; };
+		81282753289B506600218F4C /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 81282752289B506600218F4C /* JGProgressHUD */; };
 		816CBB622897527C0078D26E /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB612897527C0078D26E /* ReusableViewProtocol.swift */; };
 		816CBB65289757930078D26E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB64289757930078D26E /* Constant.swift */; };
 		816CBB6728975FAA0078D26E /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CBB6628975FAA0078D26E /* UserDefaultsHelper.swift */; };
@@ -24,10 +25,9 @@
 		819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6EF2892305100685E2C /* TranslateViewController.swift */; };
 		819CD6F228923A9900685E2C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F128923A9900685E2C /* WebViewController.swift */; };
 		819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819CD6F328927EFD00685E2C /* buttonViewController.swift */; };
+		81C55358289F2FE300862897 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C55357289F2FE300862897 /* APIManager.swift */; };
 		81E6F4572898BD180034C0F7 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F4562898BD180034C0F7 /* BoxOfficeModel.swift */; };
 		81E6F459289901B40034C0F7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F458289901B40034C0F7 /* Extension.swift */; };
-		81E6F45B289917970034C0F7 /* BeerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */; };
-		81E6F45D289917BA0034C0F7 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */; };
 		81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA7BDF28935D4500822FF2 /* LocationViewController.swift */; };
 		81EA7BE5289384D500822FF2 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE2289384D500822FF2 /* SCDream3.otf */; };
 		81EA7BE6289384D500822FF2 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81EA7BE3289384D500822FF2 /* SCDream1.otf */; };
@@ -59,10 +59,9 @@
 		819CD6EF2892305100685E2C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		819CD6F128923A9900685E2C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		819CD6F328927EFD00685E2C /* buttonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
+		81C55357289F2FE300862897 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		81E6F4562898BD180034C0F7 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		81E6F458289901B40034C0F7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewController.swift; sourceTree = "<group>"; };
-		81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		81EA7BDF28935D4500822FF2 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		81EA7BE2289384D500822FF2 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
 		81EA7BE3289384D500822FF2 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81282753289B506600218F4C /* JGProgressHUD in Frameworks */,
 				81F5AB112897C89900BFFBAE /* Kingfisher in Frameworks */,
 				81EEACFB28977CF3002E9035 /* SwiftyJSON in Frameworks */,
 				81EEACF828977CDB002E9035 /* Alamofire in Frameworks */,
@@ -88,6 +88,7 @@
 		81002FFD2890DD7A006F6E5E = {
 			isa = PBXGroup;
 			children = (
+				81C55356289F2FD300862897 /* APIManager */,
 				81F5AB032897B60300BFFBAE /* Beer */,
 				81EA7BE1289383EB00822FF2 /* Resource */,
 				810030082890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic */,
@@ -147,6 +148,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		81C55356289F2FD300862897 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				81C55357289F2FE300862897 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		81EA7BE1289383EB00822FF2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +171,6 @@
 			children = (
 				81F5AB062897B65D00BFFBAE /* BeerViewController.swift */,
 				81F5AB082897B68700BFFBAE /* Beer.storyboard */,
-				81E6F45A289917970034C0F7 /* BeerCollectionViewController.swift */,
-				81E6F45C289917BA0034C0F7 /* BeerCollectionViewCell.swift */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 				81EEACF728977CDB002E9035 /* Alamofire */,
 				81EEACFA28977CF3002E9035 /* SwiftyJSON */,
 				81F5AB102897C89900BFFBAE /* Kingfisher */,
+				81282752289B506600218F4C /* JGProgressHUD */,
 			);
 			productName = SeSAC2LectureNewtworkBasic;
 			productReference = 810030062890DD7A006F6E5E /* SeSAC2LectureNewtworkBasic.app */;
@@ -221,6 +229,7 @@
 				81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				81EEACF928977CF3002E9035 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				81F5AB0F2897C89900BFFBAE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				81282751289B506600218F4C /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 810030072890DD7A006F6E5E /* Products */;
 			projectDirPath = "";
@@ -261,13 +270,12 @@
 				8100301E2890E1F2006F6E5E /* SearchViewController.swift in Sources */,
 				81F5AB072897B65D00BFFBAE /* BeerViewController.swift in Sources */,
 				819CD6F428927EFD00685E2C /* buttonViewController.swift in Sources */,
-				81E6F45B289917970034C0F7 /* BeerCollectionViewController.swift in Sources */,
 				816CBB622897527C0078D26E /* ReusableViewProtocol.swift in Sources */,
 				81E6F459289901B40034C0F7 /* Extension.swift in Sources */,
 				81EA7BE028935D4500822FF2 /* LocationViewController.swift in Sources */,
-				81E6F45D289917BA0034C0F7 /* BeerCollectionViewCell.swift in Sources */,
 				819CD6EE2892236600685E2C /* LottoViewController.swift in Sources */,
 				8100300C2890DD7A006F6E5E /* SceneDelegate.swift in Sources */,
+				81C55358289F2FE300862897 /* APIManager.swift in Sources */,
 				816CBB65289757930078D26E /* Constant.swift in Sources */,
 				81E6F4572898BD180034C0F7 /* BoxOfficeModel.swift in Sources */,
 				819CD6F02892305100685E2C /* TranslateViewController.swift in Sources */,
@@ -492,6 +500,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		81282751289B506600218F4C /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -519,6 +535,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		81282752289B506600218F4C /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81282751289B506600218F4C /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
 		81EEACF728977CDB002E9035 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 81EEACF628977CDB002E9035 /* XCRemoteSwiftPackageReference "Alamofire" */;
